@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8A76FB092C6085C5007A01EA /* AmountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB082C6085C5007A01EA /* AmountScreen.swift */; };
-		8A76FB0B2C608953007A01EA /* ViewsallScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0A2C608953007A01EA /* ViewsallScreen.swift */; };
 		8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */; };
 		8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */; };
+		969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CAD022C62169100217FBC /* PassbookScreen.swift */; };
 		9FF8D2D929FABD6000CDCA15 /* BankingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */; };
 		9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */; };
 		9FF8D2DD29FABD6200CDCA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF8D2DC29FABD6200CDCA15 /* Assets.xcassets */; };
@@ -24,9 +24,9 @@
 
 /* Begin PBXFileReference section */
 		8A76FB082C6085C5007A01EA /* AmountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountScreen.swift; sourceTree = "<group>"; };
-		8A76FB0A2C608953007A01EA /* ViewsallScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsallScreen.swift; sourceTree = "<group>"; };
 		8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfiledetailsScreen.swift; sourceTree = "<group>"; };
 		8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackScreen.swift; sourceTree = "<group>"; };
+		969CAD022C62169100217FBC /* PassbookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookScreen.swift; sourceTree = "<group>"; };
 		9FF8D2D529FABD6000CDCA15 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppApp.swift; sourceTree = "<group>"; };
 		9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,7 +72,6 @@
 				9FF8D2ED29FAD52900CDCA15 /* Utils */,
 				9FF8D2E629FABFAC00CDCA15 /* View */,
 				9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */,
-				8A76FB0A2C608953007A01EA /* ViewsallScreen.swift */,
 				9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */,
 				8A76FB082C6085C5007A01EA /* AmountScreen.swift */,
 				9FF8D2DC29FABD6200CDCA15 /* Assets.xcassets */,
@@ -94,6 +93,7 @@
 			children = (
 				9FF8D2E729FABFBF00CDCA15 /* CircularImageView.swift */,
 				9FF8D2E929FAC1EC00CDCA15 /* BankCardView.swift */,
+				969CAD022C62169100217FBC /* PassbookScreen.swift */,
 				9FF8D2EB29FACF9200CDCA15 /* ShareCardView.swift */,
 				8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */,
 				8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */,
@@ -138,7 +138,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					9FF8D2D429FABD6000CDCA15 = {
 						CreatedOnToolsVersion = 14.2;
@@ -180,11 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A76FB0B2C608953007A01EA /* ViewsallScreen.swift in Sources */,
 				9FF8D2EC29FACF9200CDCA15 /* ShareCardView.swift in Sources */,
 				8A76FB092C6085C5007A01EA /* AmountScreen.swift in Sources */,
 				9FF8D2EF29FAD60400CDCA15 /* Data.swift in Sources */,
 				9FF8D2F129FBD45900CDCA15 /* TransactionItemView.swift in Sources */,
+				969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */,
 				9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */,
 				8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */,
 				8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */,
@@ -201,6 +201,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -233,6 +234,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -261,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -293,6 +296,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

@@ -1,12 +1,20 @@
 //
+//  PassbookScreen.swift
+//  BankingApp
+//
+//  Created by Udita Chakraborty on 06/08/24.
+//
+
+
+//
 //  ViewsallScreen.swift
 //  BankingApp
 //
 //  Created by Totan Hazra on 05/08/24.
 //
-
+ 
 import SwiftUI
-
+ 
 struct ViewsallScreen: View {
     let transactions = [
         ("16-04-2001", "1000", "0", "1000"),
@@ -79,7 +87,8 @@ struct ViewsallScreen: View {
         }
     }
 }
-
+ 
 #Preview {
     ViewsallScreen()
 }
+ 

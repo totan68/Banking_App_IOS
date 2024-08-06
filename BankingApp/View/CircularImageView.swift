@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CircularImageView: View {
-    let image: String
+    let image: ImageResource
     let size: CGFloat
     
     var body: some View {
@@ -22,7 +22,7 @@ struct CircularImageView: View {
 
 struct CircularImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularImageView(image: "1", size: 50)
+        CircularImageView(image: .avatar, size: 50)
             .previewLayout(.sizeThatFits)
     }
 }
