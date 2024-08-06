@@ -10,6 +10,10 @@
 		8A76FB092C6085C5007A01EA /* AmountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB082C6085C5007A01EA /* AmountScreen.swift */; };
 		8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */; };
 		8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */; };
+		967AFFAE2C624CFF00F58CE8 /* TransactionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */; };
+		967AFFB02C624DFE00F58CE8 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFAF2C624DFE00F58CE8 /* TransactionRow.swift */; };
+		967AFFB22C625AAE00F58CE8 /* AddRecipientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFB12C625AAE00F58CE8 /* AddRecipientView.swift */; };
+		967AFFB42C625FC100F58CE8 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFB32C625FC100F58CE8 /* Recipient.swift */; };
 		969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CAD022C62169100217FBC /* PassbookScreen.swift */; };
 		9FF8D2D929FABD6000CDCA15 /* BankingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */; };
 		9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */; };
@@ -26,6 +30,10 @@
 		8A76FB082C6085C5007A01EA /* AmountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountScreen.swift; sourceTree = "<group>"; };
 		8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfiledetailsScreen.swift; sourceTree = "<group>"; };
 		8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackScreen.swift; sourceTree = "<group>"; };
+		967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeader.swift; sourceTree = "<group>"; };
+		967AFFAF2C624DFE00F58CE8 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		967AFFB12C625AAE00F58CE8 /* AddRecipientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientView.swift; sourceTree = "<group>"; };
+		967AFFB32C625FC100F58CE8 /* Recipient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
 		969CAD022C62169100217FBC /* PassbookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookScreen.swift; sourceTree = "<group>"; };
 		9FF8D2D529FABD6000CDCA15 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppApp.swift; sourceTree = "<group>"; };
@@ -98,6 +106,9 @@
 				8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */,
 				8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */,
 				9FF8D2F029FBD45900CDCA15 /* TransactionItemView.swift */,
+				967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */,
+				967AFFB12C625AAE00F58CE8 /* AddRecipientView.swift */,
+				967AFFAF2C624DFE00F58CE8 /* TransactionRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -106,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF8D2EE29FAD60400CDCA15 /* Data.swift */,
+				967AFFB32C625FC100F58CE8 /* Recipient.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -182,13 +194,17 @@
 			files = (
 				9FF8D2EC29FACF9200CDCA15 /* ShareCardView.swift in Sources */,
 				8A76FB092C6085C5007A01EA /* AmountScreen.swift in Sources */,
+				967AFFB02C624DFE00F58CE8 /* TransactionRow.swift in Sources */,
 				9FF8D2EF29FAD60400CDCA15 /* Data.swift in Sources */,
 				9FF8D2F129FBD45900CDCA15 /* TransactionItemView.swift in Sources */,
+				967AFFB42C625FC100F58CE8 /* Recipient.swift in Sources */,
+				967AFFB22C625AAE00F58CE8 /* AddRecipientView.swift in Sources */,
 				969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */,
 				9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */,
 				8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */,
 				8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */,
 				9FF8D2E829FABFBF00CDCA15 /* CircularImageView.swift in Sources */,
+				967AFFAE2C624CFF00F58CE8 /* TransactionsHeader.swift in Sources */,
 				9FF8D2EA29FAC1EC00CDCA15 /* BankCardView.swift in Sources */,
 				9FF8D2D929FABD6000CDCA15 /* BankingAppApp.swift in Sources */,
 			);

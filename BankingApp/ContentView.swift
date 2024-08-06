@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var recipientManager = RecipientManager()
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 // MARK: - Top Bank Card Section
                 NavigationStack{
                     VStack {
-                        BankCardView(balance: "24,098.00")
+                        BankCardView(balance: "")
                             .zIndex(1)
                         ShareCardView()
                             .offset(y: -30)
@@ -30,7 +31,7 @@ struct ContentView: View {
                     .padding(.bottom, 5)
                 
                 HStack {
-                    Text("500.00 INR")
+                    Text("₹ \(formattedAmount(recipientManager.totalAmount))")
                         .font(.system(size: 25))
                         .fontWeight(.bold)
                     Spacer()
@@ -67,18 +68,12 @@ struct ContentView: View {
                
                 
                 // MARK: - Transactions List
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHStack(spacing: 10) {
-                        
-                        TransactionItemView(title: "Google Pay", icon: .google)
-                        TransactionItemView(title: "Google Pay", icon: .google)
-                        TransactionItemView(title: "Google Pay", icon: .google)
-                        
-                        
-                        
-                    }
-                }
-                .padding(.horizontal, 30)
+                
+                   
+                        TransactionItemView()
+                   
+               
+                
                 
             }
             .toolbar {
@@ -99,7 +94,21 @@ struct ContentView: View {
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
+            .alert(isPresented: $recipientManager.showAlert) {
+                            Alert(
+                                title: Text("Insufficient Funds"),
+                                message: Text("Add money to your account for further transactions."),
+                                dismissButton: .default(Text("OK"))
+                            )
+                        }
         }
+    }
+private func formattedAmount(_ amount: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        return formatter.string(from: NSNumber(value: amount)) ?? "\(amount)"
     }
 }
 
