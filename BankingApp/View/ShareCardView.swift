@@ -18,10 +18,11 @@ struct ShareCardView: View {
                                     .foregroundColor(.white)
                                     .padding(.top, 10) // Spacing between text and circle
                             }
-                            .padding(.trailing, 10) // Space between profile and feedback button
+                            .padding(.trailing, 18)
+                            .padding(.leading, 22)// Space between profile and feedback button
                             
                             // Feedback Button
-                            NavigationLink(destination: FeedBackScreen()) {
+                            NavigationLink(destination: FeedbackScreen()) {
                                 Image(systemName: "message.fill") // Feedback icon
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
@@ -33,25 +34,54 @@ struct ShareCardView: View {
                                     .clipShape(Circle()) // Make the background circular
                                     .shadow(radius: 10) // Optional shadow
                             }
+                            .padding(.top, 8)
+                            .padding(.trailing, 20)
+                            NavigationLink(destination: ViewsallScreen()) {
+                                Image(systemName: "book") // Use the passbook system symbol
+                                    .resizable() // Make the image resizable
+                                    .aspectRatio(contentMode: .fit) // Maintain the aspect ratio of the image
+                                    .frame(width: 30, height: 40) // Set the size of the circle
+                                    .foregroundColor(.white) // Set the color of the image
+                                    .padding() // Add padding around the image
+                                    .background(Color.blue) // Background color for the circle
+                                    .clipShape(Circle()) // Clip the image to a circle shape
+                                    .shadow(radius: 10)
+                            }
+                            .padding(.top, 6)
                         }
                         
-                        Text("Profile")
-                            .foregroundColor(.white)
-                            .font(.system(size: 17))
-                            .fontWeight(.bold)
+                        HStack{
+                            Text("Profile")
+                                .foregroundColor(.white)
+                                .font(.system(size: 17))
+                                .fontWeight(.bold)
+                                .padding(.leading, 24)
+                            
+                            Text("Feedback")
+                                .foregroundColor(.white)
+                                .font(.system(size: 17))
+                                .fontWeight(.bold)
+                                .padding(.leading, 35)
+                            
+                            Text("Passbook")
+                                .foregroundColor(.white)
+                                .font(.system(size: 17))
+                                .fontWeight(.bold)
+                                .padding(.leading, 30)
+                        }
                         
                         
                         
                        
                         
                         LazyHStack(spacing: -5) {
-                            ForEach(avatars, id: \.self) { value in
-                                CircularImageView(image: value, size: 40)
-                                    .overlay {
-                                        RoundedRectangle(cornerRadius: 50)
-                                            .stroke(.black, lineWidth: 1)
-                                    }
-                            }
+                            
+//                                CircularImageView(image: .avatar, size: 40)
+//                                    .overlay {
+//                                        RoundedRectangle(cornerRadius: 50)
+//                                            .stroke(.black, lineWidth: 1)
+//                                    }
+                           
                         }
                         .frame(height: 60)
                     }

@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct TransactionItemView: View {
+    @State var title: String
+    @State var icon: ImageResource
+    //var amount: String
     var body: some View {
         ZStack {
             VStack {
-                Image(systemName: "takeoutbag.and.cup.and.straw.fill")
+                Image(icon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
                     .foregroundColor(.white)
                     .padding(.all, 5)
-                    .background(.pink)
                     .cornerRadius(10)
                 
-                Text("Fast Food")
+                Text(title)
                     .font(.title3)
                     .fontWeight(.bold)
-                
-                Text("450.00")
             }
             .padding(.all, 25)
         }
@@ -30,12 +33,15 @@ struct TransactionItemView: View {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(.gray, lineWidth: 1)
         }
+        .frame(height: 50)
     }
+    
+    
 }
 
 struct TransactionItemView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionItemView()
+        TransactionItemView(title: "Google Pay", icon: .google)
             .previewLayout(.sizeThatFits)
     }
 }
