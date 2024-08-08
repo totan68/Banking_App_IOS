@@ -1,47 +1,84 @@
+////
+////  TransactionItemView.swift
+////  BankingApp
+////
+////  
+////
 //
-//  TransactionItemView.swift
-//  BankingApp
+//import SwiftUI
 //
-//  
+//struct TransactionItemView: View {
+//    @State private var isAddRecipientPresented: Bool = false
+//    @StateObject private var recipientManager = RecipientManager()
 //
-
-import SwiftUI
-
-struct TransactionItemView: View {
-    @State var title: String
-    @State var icon: ImageResource
-    //var amount: String
-    var body: some View {
-        ZStack {
-            VStack {
-                Image(icon)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.white)
-                    .padding(.all, 5)
-                    .cornerRadius(10)
-                
-                Text(title)
-                    .font(.title3)
-                    .fontWeight(.bold)
-            }
-            .padding(.all, 25)
-        }
-        .cornerRadius(20)
-        .overlay {
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.gray, lineWidth: 1)
-        }
-        .frame(height: 50)
-    }
-    
-    
-}
-
-struct TransactionItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        TransactionItemView(title: "Google Pay", icon: .google)
-            .previewLayout(.sizeThatFits)
-    }
-}
+//    var body: some View {
+//        VStack(spacing: -40) {
+//                    TransactionsHeader(isAddRecipientPresented: $isAddRecipientPresented)
+//                        .environmentObject(recipientManager)
+//                    
+//            
+//                LazyVStack {
+//                    ScrollView(.vertical, showsIndicators: false) {
+//                            ForEach(recipientManager.recipients) { recipient in
+//                                
+//                                HStack{
+//                                    Image(.visaIconImageset)
+//                                                    .resizable()
+//                                                    .aspectRatio(contentMode: .fit)
+//                                                    .frame(width: 30, height: 30)
+//                                                    .padding(5)
+//                                    VStack(alignment: .leading){
+//                                        
+//                                            Text(recipient.name)
+//                                            .font(.headline)
+//                                            
+//                                        
+//                                            Text("\(recipient.dateAdded, formatter: dateFormatter)")
+//                                                .font(.caption)
+//                                                .foregroundColor(.gray)
+//                                        
+//                                }
+//                                    Spacer()
+//                                    Text("- ₹ \(formattedAmount(recipient.amount))")
+//                                        .font(.headline)
+//                                        .foregroundStyle(.red)
+//                                    
+//                                }
+//                                .padding(8)
+//                                    
+//                            }
+//                        }
+//                        .background(Color.white)
+//                    .cornerRadius(20)
+//            }
+//                }
+//                .padding(.horizontal)
+//                .sheet(isPresented: $isAddRecipientPresented) {
+//                    AddRecipientView(recipientManager: recipientManager)
+//                }
+//    }
+//    private func formattedAmount(_ amount: Double) -> String {
+//            let formatter = NumberFormatter()
+//            formatter.numberStyle = .decimal
+//            formatter.maximumFractionDigits = 2
+//            formatter.minimumFractionDigits = 2
+//            return formatter.string(from: NSNumber(value: amount)) ?? "\(amount)"
+//        }
+//    
+//}
+//
+//// DateFormatter for displaying the date
+//private let dateFormatter: DateFormatter = {
+//    let formatter = DateFormatter()
+//    formatter.dateStyle = .medium
+//    formatter.timeStyle = .short
+//    return formatter
+//}()
+//
+//struct TransactionItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TransactionItemView()
+//            .previewLayout(.sizeThatFits)
+//            .background(Color.gray.opacity(0.2)) 
+//    }
+//}
