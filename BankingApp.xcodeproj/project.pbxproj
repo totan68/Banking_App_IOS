@@ -10,10 +10,25 @@
 		8A76FB092C6085C5007A01EA /* AmountScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB082C6085C5007A01EA /* AmountScreen.swift */; };
 		8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */; };
 		8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */; };
+		9645F8322C64B19A00DA2C15 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9645F8312C64B19A00DA2C15 /* LandingPage.swift */; };
+		9645F8342C64B1CB00DA2C15 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9645F8332C64B1CB00DA2C15 /* SettingsScreen.swift */; };
+		964C4F2F2C6487F500C49D14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C4F2E2C6487F500C49D14 /* User.swift */; };
+		964C4F312C64882700C49D14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C4F302C64882700C49D14 /* LoginView.swift */; };
+		964C4F332C64886400C49D14 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C4F322C64886400C49D14 /* SignupView.swift */; };
+		965E5F112C69EEE80083AFBA /* MainDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E5F102C69EEE80083AFBA /* MainDashboard.swift */; };
+		9679F71F2C6CB2D10039306B /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679F71E2C6CB2D10039306B /* ContactView.swift */; };
+		9679F7212C6CB30C0039306B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679F7202C6CB30C0039306B /* AboutView.swift */; };
 		967AFFAE2C624CFF00F58CE8 /* TransactionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */; };
-		967AFFB02C624DFE00F58CE8 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFAF2C624DFE00F58CE8 /* TransactionRow.swift */; };
 		967AFFB22C625AAE00F58CE8 /* AddRecipientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFB12C625AAE00F58CE8 /* AddRecipientView.swift */; };
 		967AFFB42C625FC100F58CE8 /* Recipient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFB32C625FC100F58CE8 /* Recipient.swift */; };
+		9695FD302C6D1499007965DF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9695FD2F2C6D1499007965DF /* Transaction.swift */; };
+		96981B882C69DEC60044E593 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96981B872C69DEC60044E593 /* Users.swift */; };
+		96981B8A2C69E6920044E593 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96981B892C69E6920044E593 /* GoogleService-Info.plist */; };
+		96981B8D2C69E7D80044E593 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 96981B8C2C69E7D80044E593 /* FirebaseAuth */; };
+		96981B8F2C69E7D80044E593 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 96981B8E2C69E7D80044E593 /* FirebaseFirestore */; };
+		96981B912C69E7D80044E593 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 96981B902C69E7D80044E593 /* FirebaseFirestoreCombine-Community */; };
+		96981B932C69E7D80044E593 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 96981B922C69E7D80044E593 /* FirebaseStorage */; };
+		96981B992C69E8B70044E593 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96981B982C69E8B70044E593 /* AuthViewModel.swift */; };
 		969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CAD022C62169100217FBC /* PassbookScreen.swift */; };
 		9FF8D2D929FABD6000CDCA15 /* BankingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */; };
 		9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */; };
@@ -30,10 +45,21 @@
 		8A76FB082C6085C5007A01EA /* AmountScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountScreen.swift; sourceTree = "<group>"; };
 		8A76FB0C2C609C3B007A01EA /* ProfiledetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfiledetailsScreen.swift; sourceTree = "<group>"; };
 		8A76FB0E2C609DE4007A01EA /* FeedBackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackScreen.swift; sourceTree = "<group>"; };
+		9645F8312C64B19A00DA2C15 /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
+		9645F8332C64B1CB00DA2C15 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		964C4F2E2C6487F500C49D14 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		964C4F302C64882700C49D14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		964C4F322C64886400C49D14 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		965E5F102C69EEE80083AFBA /* MainDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDashboard.swift; sourceTree = "<group>"; };
+		9679F71E2C6CB2D10039306B /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		9679F7202C6CB30C0039306B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeader.swift; sourceTree = "<group>"; };
-		967AFFAF2C624DFE00F58CE8 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		967AFFB12C625AAE00F58CE8 /* AddRecipientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipientView.swift; sourceTree = "<group>"; };
 		967AFFB32C625FC100F58CE8 /* Recipient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipient.swift; sourceTree = "<group>"; };
+		9695FD2F2C6D1499007965DF /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		96981B872C69DEC60044E593 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		96981B892C69E6920044E593 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BankingApp/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		96981B982C69E8B70044E593 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		969CAD022C62169100217FBC /* PassbookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookScreen.swift; sourceTree = "<group>"; };
 		9FF8D2D529FABD6000CDCA15 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppApp.swift; sourceTree = "<group>"; };
@@ -52,12 +78,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96981B912C69E7D80044E593 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				96981B932C69E7D80044E593 /* FirebaseStorage in Frameworks */,
+				96981B8D2C69E7D80044E593 /* FirebaseAuth in Frameworks */,
+				96981B8F2C69E7D80044E593 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96981B952C69E8150044E593 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				964C4F302C64882700C49D14 /* LoginView.swift */,
+				964C4F322C64886400C49D14 /* SignupView.swift */,
+				96981B972C69E8450044E593 /* ViewModel */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		96981B972C69E8450044E593 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				96981B982C69E8B70044E593 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9FF8D2CC29FABD6000CDCA15 = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +125,12 @@
 		9FF8D2D729FABD6000CDCA15 /* BankingApp */ = {
 			isa = PBXGroup;
 			children = (
+				9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */,
+				96981B952C69E8150044E593 /* Authentication */,
 				9FF8D2ED29FAD52900CDCA15 /* Utils */,
 				9FF8D2E629FABFAC00CDCA15 /* View */,
-				9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */,
 				9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */,
-				8A76FB082C6085C5007A01EA /* AmountScreen.swift */,
+				96981B892C69E6920044E593 /* GoogleService-Info.plist */,
 				9FF8D2DC29FABD6200CDCA15 /* Assets.xcassets */,
 				9FF8D2DE29FABD6200CDCA15 /* Preview Content */,
 			);
@@ -108,7 +157,12 @@
 				9FF8D2F029FBD45900CDCA15 /* TransactionItemView.swift */,
 				967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */,
 				967AFFB12C625AAE00F58CE8 /* AddRecipientView.swift */,
-				967AFFAF2C624DFE00F58CE8 /* TransactionRow.swift */,
+				9645F8312C64B19A00DA2C15 /* LandingPage.swift */,
+				9645F8332C64B1CB00DA2C15 /* SettingsScreen.swift */,
+				9679F71E2C6CB2D10039306B /* ContactView.swift */,
+				9679F7202C6CB30C0039306B /* AboutView.swift */,
+				8A76FB082C6085C5007A01EA /* AmountScreen.swift */,
+				965E5F102C69EEE80083AFBA /* MainDashboard.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,6 +172,9 @@
 			children = (
 				9FF8D2EE29FAD60400CDCA15 /* Data.swift */,
 				967AFFB32C625FC100F58CE8 /* Recipient.swift */,
+				9695FD2F2C6D1499007965DF /* Transaction.swift */,
+				964C4F2E2C6487F500C49D14 /* User.swift */,
+				96981B872C69DEC60044E593 /* Users.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -138,6 +195,12 @@
 			dependencies = (
 			);
 			name = BankingApp;
+			packageProductDependencies = (
+				96981B8C2C69E7D80044E593 /* FirebaseAuth */,
+				96981B8E2C69E7D80044E593 /* FirebaseFirestore */,
+				96981B902C69E7D80044E593 /* FirebaseFirestoreCombine-Community */,
+				96981B922C69E7D80044E593 /* FirebaseStorage */,
+			);
 			productName = BankingApp;
 			productReference = 9FF8D2D529FABD6000CDCA15 /* BankingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 9FF8D2CC29FABD6000CDCA15;
+			packageReferences = (
+				96981B8B2C69E7D80044E593 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9FF8D2D629FABD6000CDCA15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -182,6 +248,7 @@
 			files = (
 				9FF8D2E029FABD6200CDCA15 /* Preview Assets.xcassets in Resources */,
 				9FF8D2DD29FABD6200CDCA15 /* Assets.xcassets in Resources */,
+				96981B8A2C69E6920044E593 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,18 +259,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964C4F332C64886400C49D14 /* SignupView.swift in Sources */,
 				9FF8D2EC29FACF9200CDCA15 /* ShareCardView.swift in Sources */,
 				8A76FB092C6085C5007A01EA /* AmountScreen.swift in Sources */,
-				967AFFB02C624DFE00F58CE8 /* TransactionRow.swift in Sources */,
 				9FF8D2EF29FAD60400CDCA15 /* Data.swift in Sources */,
+				964C4F2F2C6487F500C49D14 /* User.swift in Sources */,
 				9FF8D2F129FBD45900CDCA15 /* TransactionItemView.swift in Sources */,
 				967AFFB42C625FC100F58CE8 /* Recipient.swift in Sources */,
+				965E5F112C69EEE80083AFBA /* MainDashboard.swift in Sources */,
+				9645F8342C64B1CB00DA2C15 /* SettingsScreen.swift in Sources */,
 				967AFFB22C625AAE00F58CE8 /* AddRecipientView.swift in Sources */,
+				9645F8322C64B19A00DA2C15 /* LandingPage.swift in Sources */,
 				969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */,
 				9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */,
+				9679F71F2C6CB2D10039306B /* ContactView.swift in Sources */,
+				9695FD302C6D1499007965DF /* Transaction.swift in Sources */,
+				96981B882C69DEC60044E593 /* Users.swift in Sources */,
+				964C4F312C64882700C49D14 /* LoginView.swift in Sources */,
+				9679F7212C6CB30C0039306B /* AboutView.swift in Sources */,
 				8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */,
 				8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */,
 				9FF8D2E829FABFBF00CDCA15 /* CircularImageView.swift in Sources */,
+				96981B992C69E8B70044E593 /* AuthViewModel.swift in Sources */,
 				967AFFAE2C624CFF00F58CE8 /* TransactionsHeader.swift in Sources */,
 				9FF8D2EA29FAC1EC00CDCA15 /* BankCardView.swift in Sources */,
 				9FF8D2D929FABD6000CDCA15 /* BankingAppApp.swift in Sources */,
@@ -351,7 +428,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.devwithgeraud.BankingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftudita.BankingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -379,7 +456,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.devwithgeraud.BankingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftudita.BankingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -409,6 +486,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		96981B8B2C69E7D80044E593 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96981B8C2C69E7D80044E593 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96981B8B2C69E7D80044E593 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		96981B8E2C69E7D80044E593 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96981B8B2C69E7D80044E593 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		96981B902C69E7D80044E593 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96981B8B2C69E7D80044E593 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		96981B922C69E7D80044E593 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96981B8B2C69E7D80044E593 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FF8D2CD29FABD6000CDCA15 /* Project object */;
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4C02ECCC-5B8D-4308-9AB2-29CE3C4FC8E3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A95608F-5631-4AAE-A52E-72C352F9C0F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BankingApp/View/AboutView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AboutView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "2A95608F-5631-4AAE-A52E-72C352F9C0F2 - 754396a2048cb5a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of BankingApp.AboutView.showMore : Swift.Bool"
+                  moduleName = "BankingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Udita.Chakraborty/Downloads/Banking_App_IOS/BankingApp/View/AboutView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "2A95608F-5631-4AAE-A52E-72C352F9C0F2 - b77d00de79d0864"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BankingApp.AboutView.init(dismissed: SwiftUI.Environment&lt;SwiftUI.DismissAction&gt;) -&gt; BankingApp.AboutView"
+                  moduleName = "BankingApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Udita.Chakraborty/Downloads/Banking_App_IOS/BankingApp/View/AboutView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -19,21 +19,24 @@ struct BankCardView: View {
                     VStack(alignment: .leading) {
                         Image("credit-card")
                             .resizable()
+                            .foregroundColor(.black)
                             .frame(width: 40, height: 40)
                         
                         Spacer()
                         
                         HStack {
-                            Text("Balance")
+                            Text("Transaction Limit")
                                 .font(.subheadline)
                                 .foregroundColor(Color.gray)
                             Image(systemName: "eye")
                                 .font(.system(size: 13))
+                                .foregroundColor(Color(.systemGray))
                         }
                         
-                        Text("INR-\(balance)")
+                        Text("₹ \(balance)")
                             .padding(.top, 1)
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
+                            .foregroundColor(.black)
                             .fontWeight(.bold)
                         
                     }
@@ -43,9 +46,11 @@ struct BankCardView: View {
                     VStack(alignment: .trailing) {
                         Label {
                             Text("HDFC Bank")
+                                .foregroundColor(.black)
                                 .fontWeight(.bold)
                         } icon: {
                             Image(systemName: "globe.central.south.asia.fill")
+                                .foregroundColor(.black)
                         }
                         Spacer()
                         Image("visa")

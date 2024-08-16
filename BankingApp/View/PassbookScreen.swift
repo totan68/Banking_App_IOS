@@ -33,7 +33,7 @@ struct ViewsallScreen: View {
     ]
     
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 // Header text
                 Text("A/C No: 26733211036456")
