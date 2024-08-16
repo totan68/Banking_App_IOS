@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var recipientManager = RecipientManager()
+    @StateObject private var userManager = UserManager()
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
                 // MARK: - Top Bank Card Section
                 NavigationStack{
                     VStack {
-                        BankCardView(balance: "")
+                        BankCardView(balance: "85,000")
                             .zIndex(1)
                         ShareCardView()
                             .offset(y: -30)
@@ -24,7 +25,7 @@ struct ContentView: View {
                 .padding(.top, 3)
                 
                 // MARK: - Middle Section
-                Text("Amount")
+                Text("Available Balance")
                     .font(.title3)
                     .fontWeight(.bold)
                     .padding(.horizontal, 30)
@@ -69,10 +70,21 @@ struct ContentView: View {
                 
                 // MARK: - Transactions List
                 
-                   
-                        TransactionItemView()
-                   
-               
+                
+                TransactionItemView()
+                
+//                Button("Print Deets"){
+//                    print(recipientManager.recipients)
+//                }
+//                .padding()
+//                .buttonStyle(.bordered)
+                if userManager.isLoggedIn {
+                    Button("Logout") {
+                        userManager.logout()
+                    }
+                    .padding()
+                    .buttonStyle(.bordered)
+                }
                 
                 
             }
@@ -81,7 +93,7 @@ struct ContentView: View {
                     Text("Hello")
                         .font(.system(size: 30))
                         .fontWeight(.light)
-                    Text("User")
+                    Text(userManager.username.isEmpty ? "User" : userManager.username)
                         .font(.system(size: 30))
                         .fontWeight(.bold)
                 }
@@ -102,6 +114,8 @@ struct ContentView: View {
                             )
                         }
         }
+        .environmentObject(recipientManager)
+        .environmentObject(userManager)
     }
 private func formattedAmount(_ amount: Double) -> String {
         let formatter = NumberFormatter()
@@ -115,5 +129,7 @@ private func formattedAmount(_ amount: Double) -> String {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(RecipientManager())
+            .environmentObject(UserManager())
     }
 }

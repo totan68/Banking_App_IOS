@@ -13,6 +13,7 @@ struct AddRecipientView: View {
     @ObservedObject var recipientManager: RecipientManager
     @State private var recipientName: String = ""
     @State private var recipientAmount: String = ""
+    @State private var showValidationAlert: Bool = false
     
     var body: some View {
         NavigationView {
@@ -28,14 +29,19 @@ struct AddRecipientView: View {
                     .padding()
                 
                 Button {
-//                    // Handle adding the recipient
-//                    print("Recipient Added: \(recipientName)")
-//                    // Dismiss the view
-//                    isPresented = false
-                    if !recipientName.isEmpty || !recipientAmount.isEmpty {
-                        recipientManager.addRecipient(name: recipientName, amount: Double(recipientAmount) ?? 0.00)
-                        presentationMode.wrappedValue.dismiss() // Dismiss the view
+                   
+//                    if !recipientName.isEmpty || !recipientAmount.isEmpty {
+//                        recipientManager.addRecipient(name: recipientName, amount: Double(recipientAmount)!)
+//                        presentationMode.wrappedValue.dismiss()
+                    if validateFields() {
+                                            if let amount = Double(recipientAmount) {
+                                                recipientManager.addRecipient(name: recipientName, amount: amount)
+                                                presentationMode.wrappedValue.dismiss() // Dismiss the view
+                                            }
+                                        } else {
+                                            showValidationAlert = true
                                         }
+//                    }
                 } label: {
                     HStack {
                         Image(systemName: "plus.circle.fill")
@@ -50,6 +56,7 @@ struct AddRecipientView: View {
                     .background(.black)
                     .cornerRadius(10)
                 }
+//                .disabled(!validateFields())
                 
                 
                 
@@ -57,8 +64,19 @@ struct AddRecipientView: View {
                 Spacer()
             }
             .navigationTitle("Add Recipient")
+            .alert(isPresented: $showValidationAlert) {
+                            Alert(
+                                title: Text("Validation Error"),
+                                message: Text("Please add recipient details in order to initiate the transaction."),
+                                dismissButton: .default(Text("OK"))
+                            )
+                        }
         }
     }
+                          private func validateFields() -> Bool {
+                                  // Check if fields are not empty and amount is a valid number
+                                  return !recipientName.isEmpty && !recipientAmount.isEmpty && Double(recipientAmount) != nil
+                              }
 }
 
 

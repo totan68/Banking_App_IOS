@@ -24,16 +24,16 @@ struct BankCardView: View {
                         Spacer()
                         
                         HStack {
-                            Text("Balance")
+                            Text("Transaction Limit")
                                 .font(.subheadline)
                                 .foregroundColor(Color.gray)
                             Image(systemName: "eye")
                                 .font(.system(size: 13))
                         }
                         
-                        Text("INR-\(balance)")
+                        Text("₹ \(balance)")
                             .padding(.top, 1)
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
                             .fontWeight(.bold)
                         
                     }
