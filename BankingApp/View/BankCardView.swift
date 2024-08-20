@@ -10,6 +10,7 @@ import SwiftUI
 struct BankCardView: View {
     
     let balance: String
+    let cardType: String
     
     var body: some View {
         ZStack {
@@ -23,7 +24,10 @@ struct BankCardView: View {
                             .frame(width: 40, height: 40)
                         
                         Spacer()
-                        
+                        Text(cardType)
+                            .font(.headline)
+                            .foregroundColor(Color.gray)
+                        Spacer()
                         HStack {
                             Text("Transaction Limit")
                                 .font(.subheadline)
@@ -65,7 +69,7 @@ struct BankCardView: View {
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: 200)
-        .background(Color("green"))
+        .background(Color(.green))
         .cornerRadius(25)
         .padding(.horizontal)
     }
@@ -73,7 +77,7 @@ struct BankCardView: View {
 
 struct BankCardView_Previews: PreviewProvider {
     static var previews: some View {
-        BankCardView(balance: "35000")
+        BankCardView(balance: "35000", cardType: "Credit Card")
             .previewLayout(.sizeThatFits)
     }
 }

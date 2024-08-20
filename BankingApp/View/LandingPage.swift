@@ -9,7 +9,6 @@ import SwiftUI
 
 struct LandingPageView: View {
     
-    @State private var isShowingSettings = false
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -18,7 +17,7 @@ struct LandingPageView: View {
                 
                 VStack(alignment: .leading) {
                     // Welcome Section
-                    Text("Welcome, \(user.fullname)!")
+                    Text("Welcome, \(user.firstName)!")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding()
@@ -84,15 +83,6 @@ struct LandingPageView: View {
                                 .foregroundColor(.red)
                                 
                         })
-//                        NavigationLink(destination: SettingsView()) {
-//                            Text("Settings")
-//                                .frame(maxWidth: .infinity)
-//                                .padding()
-//                                .background(Color(.systemGray))
-//                                .foregroundColor(.white)
-//                                .font(.headline)
-//                                .cornerRadius(10)
-//                        }
                     }
                     .padding()
                     
@@ -101,18 +91,12 @@ struct LandingPageView: View {
                 .navigationTitle("")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            isShowingSettings.toggle()
-                        }) {
+                        NavigationLink(destination: SettingsView()) {
                             Image(systemName: "gear")
                                 .imageScale(.large)
                                 
                         }
                     }
-                }
-                .sheet(isPresented: $isShowingSettings) {
-                    SettingsView()
-                    
                 }
             }
         }

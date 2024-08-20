@@ -11,7 +11,9 @@ struct MainDashboard: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @StateObject private var recipientManager = RecipientManager()
     @StateObject private var userManager = UserManager()
-    @State private var isDrawerOpen = false // State to toggle drawer visibility
+    @State private var isDrawerOpen = false
+    @State private var showCreditCard: Bool = false
+    @State private var showDebitCard: Bool = false
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -21,7 +23,7 @@ struct MainDashboard: View {
                             Text("Hello")
                                 .font(.system(size: 30))
                                 .fontWeight(.light)
-                            Text("\(viewModel.currentUser?.fullname ?? "User"),")
+                            Text("\(viewModel.currentUser?.firstName ?? "User"),")
                                 .font(.system(size: 30))
                                 .fontWeight(.bold)
                         }
@@ -29,8 +31,21 @@ struct MainDashboard: View {
                         .padding(.top)
                         // MARK: - Top Bank Card Section
                         VStack {
-                            BankCardView(balance: "\(formattedAmount(recipientManager.totalAmount + 10500))")
-                                .zIndex(1)
+                            ScrollView(.horizontal, showsIndicators: false){
+                                HStack{
+                                    BankCardView(balance: "\(formattedAmount(recipientManager.totalAmount))", cardType: "Debit Card")
+                                        .padding(.trailing, -15)
+                                        .onTapGesture {
+                                            showDebitCard.toggle()
+                                        }
+                                    BankCardView(balance: "85000", cardType: "Credit Card")
+                                        .padding(.leading, -15)
+                                        .onTapGesture {
+                                            showCreditCard.toggle()
+                                        }
+                                }
+                            }
+                            .zIndex(1)
                             ShareCardView()
                                 .offset(y: -30)
                         }
@@ -182,14 +197,17 @@ struct SideMenuView: View {
             
             // Menu Items
             List {
-                NavigationLink(destination: ProfiledetailsScreen()) {
-                    Text("Contact Page")
-                }
                 NavigationLink(destination: FeedbackScreen()) {
-                    Text("Cards Page")
+                    Text("Feedback Page")
                 }
-                NavigationLink(destination: AmountScreen()) {
-                    Text("Amount Screen")
+                NavigationLink(destination: ProfiledetailsScreen()) {
+                    Text("Profile Page")
+                }
+                NavigationLink(destination: BankCardView(balance: "85000", cardType: "Credit Card")) {
+                    Text("Credit Card")
+                }
+                NavigationLink(destination: BankCardView(balance: "75000", cardType: "Debit Card")) {
+                    Text("Debit Card")
                 }
             }
             .listStyle(InsetGroupedListStyle())

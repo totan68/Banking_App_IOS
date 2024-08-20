@@ -16,6 +16,7 @@
 		964C4F312C64882700C49D14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C4F302C64882700C49D14 /* LoginView.swift */; };
 		964C4F332C64886400C49D14 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C4F322C64886400C49D14 /* SignupView.swift */; };
 		965E5F112C69EEE80083AFBA /* MainDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965E5F102C69EEE80083AFBA /* MainDashboard.swift */; };
+		96728F122C6F2DD600673576 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96728F112C6F2DD600673576 /* ImagePicker.swift */; };
 		9679F71F2C6CB2D10039306B /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679F71E2C6CB2D10039306B /* ContactView.swift */; };
 		9679F7212C6CB30C0039306B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679F7202C6CB30C0039306B /* AboutView.swift */; };
 		967AFFAE2C624CFF00F58CE8 /* TransactionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */; };
@@ -30,6 +31,7 @@
 		96981B932C69E7D80044E593 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 96981B922C69E7D80044E593 /* FirebaseStorage */; };
 		96981B992C69E8B70044E593 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96981B982C69E8B70044E593 /* AuthViewModel.swift */; };
 		969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969CAD022C62169100217FBC /* PassbookScreen.swift */; };
+		96E87AC62C7309A100B35E5C /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E87AC52C7309A100B35E5C /* DismissKeyboard.swift */; };
 		9FF8D2D929FABD6000CDCA15 /* BankingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */; };
 		9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */; };
 		9FF8D2DD29FABD6200CDCA15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF8D2DC29FABD6200CDCA15 /* Assets.xcassets */; };
@@ -51,6 +53,7 @@
 		964C4F302C64882700C49D14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		964C4F322C64886400C49D14 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		965E5F102C69EEE80083AFBA /* MainDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDashboard.swift; sourceTree = "<group>"; };
+		96728F112C6F2DD600673576 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		9679F71E2C6CB2D10039306B /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		9679F7202C6CB30C0039306B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		967AFFAD2C624CFF00F58CE8 /* TransactionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsHeader.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		96981B892C69E6920044E593 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "BankingApp/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		96981B982C69E8B70044E593 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		969CAD022C62169100217FBC /* PassbookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookScreen.swift; sourceTree = "<group>"; };
+		96E87AC52C7309A100B35E5C /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		9FF8D2D529FABD6000CDCA15 /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF8D2D829FABD6000CDCA15 /* BankingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingAppApp.swift; sourceTree = "<group>"; };
 		9FF8D2DA29FABD6000CDCA15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF8D2E729FABFBF00CDCA15 /* CircularImageView.swift */,
+				96728F112C6F2DD600673576 /* ImagePicker.swift */,
 				9FF8D2E929FAC1EC00CDCA15 /* BankCardView.swift */,
 				969CAD022C62169100217FBC /* PassbookScreen.swift */,
 				9FF8D2EB29FACF9200CDCA15 /* ShareCardView.swift */,
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				9FF8D2EE29FAD60400CDCA15 /* Data.swift */,
+				96E87AC52C7309A100B35E5C /* DismissKeyboard.swift */,
 				967AFFB32C625FC100F58CE8 /* Recipient.swift */,
 				9695FD2F2C6D1499007965DF /* Transaction.swift */,
 				964C4F2E2C6487F500C49D14 /* User.swift */,
@@ -272,12 +278,14 @@
 				9645F8322C64B19A00DA2C15 /* LandingPage.swift in Sources */,
 				969CAD032C62169100217FBC /* PassbookScreen.swift in Sources */,
 				9FF8D2DB29FABD6000CDCA15 /* ContentView.swift in Sources */,
+				96728F122C6F2DD600673576 /* ImagePicker.swift in Sources */,
 				9679F71F2C6CB2D10039306B /* ContactView.swift in Sources */,
 				9695FD302C6D1499007965DF /* Transaction.swift in Sources */,
 				96981B882C69DEC60044E593 /* Users.swift in Sources */,
 				964C4F312C64882700C49D14 /* LoginView.swift in Sources */,
 				9679F7212C6CB30C0039306B /* AboutView.swift in Sources */,
 				8A76FB0F2C609DE4007A01EA /* FeedBackScreen.swift in Sources */,
+				96E87AC62C7309A100B35E5C /* DismissKeyboard.swift in Sources */,
 				8A76FB0D2C609C3B007A01EA /* ProfiledetailsScreen.swift in Sources */,
 				9FF8D2E829FABFBF00CDCA15 /* CircularImageView.swift in Sources */,
 				96981B992C69E8B70044E593 /* AuthViewModel.swift in Sources */,

@@ -11,6 +11,7 @@ import Firebase
 @main
 struct BankingAppApp: App {
     @StateObject var viewModel = AuthViewModel()
+    @AppStorage("isDarkMode") private var isDarkMode = true
     init() {
         FirebaseApp.configure()
     }
@@ -18,6 +19,7 @@ struct BankingAppApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }

@@ -14,85 +14,91 @@ struct AmountScreen: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                // Header
-                Text("Manage Funds")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
-                
-                // Current Balance
-                VStack(alignment: .leading) {
-                    Text("Current Balance")
-                        .font(.title2)
+            ScrollView{
+                VStack {
+                    // Header
+                    Text("Manage Funds")
+                        .font(.title)
                         .fontWeight(.bold)
+                        .padding()
                     
-                    Text("₹ \(formattedAmount(recipientManager.totalAmount))")
-                        .font(.system(size: 30))
-                        .fontWeight(.bold)
-                }
-                .padding()
-                
-                // Add Funds Section
-                VStack(alignment: .leading) {
-                    Text("Add Funds")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                    
-                    HStack {
-                        TextField("Enter amount", text: $newAmount)
-                            .keyboardType(.decimalPad)
-                            .padding()
-                            .background(Color(.systemGray6))
-                            .cornerRadius(8)
+                    // Current Balance
+                    VStack(alignment: .leading) {
+                        Text("Current Balance")
+                            .font(.title2)
+                            .fontWeight(.bold)
                         
-                        Button(action: {
-                            addFunds()
-                        }) {
-                            Text("Add")
-                                .font(.system(size: 16))
-                                .fontWeight(.bold)
-                                .padding(.vertical, 8)
-                                .padding(.horizontal, 20)
-                                .background(Color("green"))
-                                .cornerRadius(10)
-                                .foregroundColor(.black)
-                        }
+                        Text("₹ \(formattedAmount(recipientManager.totalAmount))")
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
                     }
-                }
-                .padding()
-                
-                // Recent Transactions
-                VStack(alignment: .leading) {
-                    Text("Recent Transactions")
-                        .font(.title3)
-                        .fontWeight(.bold)
+                    .padding()
                     
-                    List {
-                        ForEach(recipientManager.recentTransactions) { transaction in
-                            TransactionRowView(transaction: transaction)
+                    // Add Funds Section
+                    VStack(alignment: .leading) {
+                        Text("Add Funds")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                        
+                        HStack {
+                            TextField("Enter amount", text: $newAmount)
+                                .keyboardType(.decimalPad)
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(8)
+                            
+                            Button(action: {
+                                addFunds()
+                                UIApplication.shared.endEditing()
+                            }) {
+                                Text("Add")
+                                    .font(.system(size: 16))
+                                    .fontWeight(.bold)
+                                    .padding(.vertical, 8)
+                                    .padding(.horizontal, 20)
+                                    .background(Color("green"))
+                                    .cornerRadius(10)
+                                    .foregroundColor(.black)
+                            }
                         }
                     }
+                    .padding()
+                    
+                    // Recent Transactions
+                    VStack(alignment: .leading) {
+                        Text("Recent Transactions")
+                            .font(.title3)
+                            .fontWeight(.bold)
+                        
+//                        Button{
+//                            print("Transactions made as : \(recipientManager.recentTransactions)")
+//                        } label: {
+//                            Text("show transactions")
+//                        }
+                        
+                        LazyVStack {
+                            ForEach(recipientManager.recentTransactions) { transaction in
+                                TransactionRowView(transaction: transaction)
+                            }
+                        }
+                    }
+                    .padding()
+                    
+                    Spacer()
                 }
-                .padding()
-                
-                Spacer()
+                .navigationTitle("Amount Management")
+                .navigationBarItems(trailing: Button("Done") {
+                                presentationMode.wrappedValue.dismiss()
+                            })
             }
-            .navigationTitle("Amount Management")
-            .navigationBarItems(trailing: Button("Done") {
-                            // Dismiss the view
-                            presentationMode.wrappedValue.dismiss()
-                        })
-        }
+            }
     }
     
     private func addFunds() {
         guard let amount = Double(newAmount), amount > 0 else { return }
         
-        // Update the recipient manager with new funds
         recipientManager.addFunds(amount: amount)
         
-        // Clear the input field
         newAmount = ""
         
     }
@@ -107,7 +113,7 @@ struct AmountScreen: View {
 }
 
 struct TransactionRowView: View {
-    let transaction: Transaction // Assume you have a Transaction model
+    let transaction: Transaction
     
     var body: some View {
         HStack {
